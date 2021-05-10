@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 面向对象 
+        // 封装 继承 多态
+
+        // ES5 伪面向对象
+        // 没有统一的写法
+        // function Person(name, age) {
+        //     this.name = name
+        //     this.age = age
+        // }
+        // Person.prototype.show = function () {
+        //     console.log('person show');
+        // }
+
+        // function Worker(name, age, job) {
+        //     Person.call(this, name, age)
+        //     this.job = job
+        // }
+        // Worker.prototype = new Person()
+        // Worker.prototype.constructor = Worker
+        // Worker.prototype.showJob = function () {
+        //     console.log('show job');
+        // }
+
+        // console.log(Worker.prototype);
+
+        class Person {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+            }
+            showName() {
+                console.log(this.name);
+            }
+            showAge() {
+                console.log(this.age);
+            }
+        }
+
+        // let p = new Person('ly', 22)
+        // console.log(p);
+
+        class Worker extends Person {
+            constructor(name, age, job) {
+                super(name, age)
+                this.job = job
+            }
+            showJob() {
+                console.log('show job');
+            }
+        }
+
+        console.log(new Worker('ly', 22, 'dev'));
+
+
+
+
+
+    </script>
+</body>
+
+</html>

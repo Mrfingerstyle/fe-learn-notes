@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        // 异步操作
+        // 同步操作 一次进行一个操作 用户体验不好 清晰
+        // 异步操作 同时进行多个操作 用户体验 代码混乱  
+
+        // 融合 异步 同步的优势
+        // promise
+        // async await
+
+        // jquery $.ajax() 返回的是promise
+        // jquery的ajax本身就是promise
+
+        // promise.all 返回多个结果
+        // promise.race 竞速 返回一个结果
+
+        // async 能够暂停
+
+    </pre>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // let p = new Promise(function (resolve, reject) {
+        //     $.ajax({
+        //         url: '/data/1.txt',
+        //         dataType: 'json',
+        //         success(arr) {
+        //             resolve(arr)
+        //         },
+        //         error(res) {
+        //             reject(res)
+        //         }
+        //     })
+        // })
+
+        // p.then(
+        //     function (arr) {
+        //         console.log(arr);
+        //         console.log('成功了');
+        //     },
+        //     function (res) {
+        //         console.log(res);
+        //         console.log('失败了');
+        //     }
+        // )
+
+        // $.ajax({
+        //     url: '/data/1.txt',
+        //     dataType: 'json'
+        // }).then(
+        //     arr => {
+        //         console.log(arr);
+        //     }, res => {
+        //         console.log(res);
+        //     })
+
+        // Promise.all([
+        //     $.ajax({ url: '/data/1.txt', dataType: "json" }),
+        //     $.ajax({ url: '/data/2.txt', dataType: "json" }),
+        //     $.ajax({ url: '/data/3.txt', dataType: "json" }),
+        // ]).then(
+        //     // arr=>{
+        //     ([data1, data2, data3]) => {
+        //         // console.log(arr);
+        //         console.log(data2);
+        //     },
+        //     res => {
+        //         console.log(res);
+        //     }
+        // )
+
+        async function show() {
+            let a = 1
+            let b = 2
+            try {
+                let data = await $.ajax({ url: '/data/1.txt', dataType: "json" })
+                console.log(data);
+            } catch (e) {
+                console.log('read error');
+            }
+        }
+        show()
+
+    </script>
+
+
+</body>
+
+</html>

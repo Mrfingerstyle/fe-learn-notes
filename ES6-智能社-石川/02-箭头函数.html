@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 箭头函数
+        function show(n, fn) {
+            console.log(fn(n));
+        }
+        show(5, n => n + 5)
+        // 简写
+        // 如果仅有一个参数 () 可以不写
+        // 如果仅有一个语句且是return ()可以不写
+
+        // 固定this指向
+        let obj = {
+            a: 1,
+            fn: () => {
+                // this -> 指向当前的环境
+                console.log(this)
+            }
+        }
+        // window
+        console.log(this);
+        obj.fn()
+
+        class Json {
+            constructor() {
+                console.log(this)
+                this.a = 12
+                this.fn = () => {
+                    console.log(this.a);
+                }
+            }
+        }
+        let json = new Json()
+
+        let date = new Date()
+        date.fn = json.fn
+        date.fn()
+
+
+
+
+
+    </script>
+</body>
+
+</html>

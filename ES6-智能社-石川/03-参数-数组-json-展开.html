@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 参数展开
+        // 收集
+        function show(a, b, ...c) {
+            console.log(a);
+            console.log(b);
+            // 以数组形式存在
+            console.log(c);
+        }
+
+        show(1, 2, 3, 4, 5)
+
+        // 展开
+        function add(a, b, c) {
+            console.log(a + b + c);
+        }
+        let arr = [1, 2, 3]
+        add(...arr)
+        let arrOther = [4, 5, 6]
+        let arrCat = [...arr, ...arrOther]
+        console.log(arrCat);
+
+        let obj = {
+            a: 1,
+            b: 2
+        }
+
+        let objOther = {
+            ...obj,
+            c: 3
+        }
+        console.log(objOther);
+
+    </script>
+</body>
+
+</html>
