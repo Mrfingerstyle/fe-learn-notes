@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = 1
+        // 变量不能重复声明
+        // 块级作用域
+        // 不存在变量提升
+        console.log(b);
+        var b = 2
+        // 不影响作用域链
+        {
+            let c = 3
+            function fn() {
+                console.log(c);
+            }
+            fn()
+        }
+
+    </script>
+</body>
+
+</html>

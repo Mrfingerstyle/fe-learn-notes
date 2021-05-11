@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">click</button>
+    <script type="module">
+        // app.js 有时需要导入的模块很多
+        // 不能实现按需加载
+
+        let btn = document.getElementById('btn')
+        btn.onclick = function () {
+            // 返回promise对象
+            import('./66-hello.js').then(module => {
+                module.hello()
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #58a;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <script>
+        const box = document.getElementById('box')
+        box.addEventListener('click', function () {
+            // let _this = this
+            // console.log(_this);
+            // setTimeout(function () {
+            //     _this.style.background = 'pink'
+            // }, 1000);
+
+            setTimeout(() => {
+                this.style.background = 'pink'
+            }, 1000);
+        })
+
+        let arr = [1, 2, 3, 4]
+        let res = arr.filter(item => item % 2 === 0)
+        console.log(res);
+
+        // 箭头函数适合与this无关的回调
+        // 定时器 数组的方法回调
+
+        // 不适合与this有关的回调 
+        // DOM相关 对象方法
+    </script>
+</body>
+
+</html>

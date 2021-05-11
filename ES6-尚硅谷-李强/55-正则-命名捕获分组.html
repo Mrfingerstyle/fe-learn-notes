@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let url = `<a href="https://www.baidu.com/">baidu</a>`
+
+        // 提取url 文本
+        const reg = /<a href="(.*)">(.*)<\/a>/
+
+        const res = reg.exec(url)
+
+        console.log(res[1], res[2]);
+
+        // 有了分组之后
+        const reg_2 = /<a href="(?<url>.*)">(?<text>.*)<\/a>/
+
+        const res_2 = reg_2.exec(url)
+
+        console.log(res_2);
+        console.log(res_2.groups.url);
+        console.log(res_2.groups.text);
+
+
+
+
+    </script>
+</body>
+
+</html>

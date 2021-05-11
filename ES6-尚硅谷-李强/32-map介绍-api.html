@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // map  类似键值对
+        let m = new Map()
+
+        m.set('name', 'll')
+        m.set('change', function () {
+            console.log('change');
+        })
+
+        let key = {
+            age: 11
+        }
+
+        m.set(key, ['a', 'b', 'c'])
+        m.delete('name')
+
+        const getItem = m.get('change')
+        getItem()
+        console.log('---');
+        for (const v of m) {
+            console.log(v);
+        }
+        // 返回数组 第一个元素是键  第二个是值
+        console.log('---');
+
+
+        console.log(m.size);
+
+        m.clear()
+
+        console.log(m);
+
+    </script>
+</body>
+
+</html>

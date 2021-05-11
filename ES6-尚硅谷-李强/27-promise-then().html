@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const p = new Promise((resolve, reject) => {
+            setTimeout(function () {
+                resolve('ok')
+                // reject('something wrong.')
+            }, 1000);
+        })
+
+        const res = p.then(val => {
+            console.log(val);
+        }, reason => {
+            console.warn(reason);
+        })
+
+        // 返回结果也是一个Promise对象
+        console.log(res);
+
+        // then方法的返回结果是Promise对象
+        // 对象的状态由回调函数的执行结果决定
+        // 1 回调函数中返回的结果是非promise类型的属性 
+
+        // 2 返回结果是promise对象
+
+        // 3 抛出错误
+
+        // then方法可以链式调用 
+        // then方法在指定回调函数的时候可以只写一个
+
+    </script>
+</body>
+
+</html>

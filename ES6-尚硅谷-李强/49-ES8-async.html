@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // async await 两种语法结合让异步代码像同步代码一样
+
+        // async函数 
+        // 返回值是promise对象
+        // promise对象的结果由async函数执行的返回值决定
+
+        async function fn() {
+            return new Promise((resolve, reject) => {
+                // resolve('success')
+                reject('fail')
+            })
+        }
+
+        const res = fn()
+        res.then(value => {
+            console.log(value);
+        }, reason => {
+            console.warn(reason);
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 用来创建对象
+        const obj = Object.fromEntries([
+            ['a', 1],
+            ['b', 2],
+        ])
+
+        console.log(obj);
+
+        const m = new Map()
+        m.set('name', 'll')
+        const res = Object.fromEntries(m)
+        console.log(res);
+
+    </script>
+</body>
+
+</html>

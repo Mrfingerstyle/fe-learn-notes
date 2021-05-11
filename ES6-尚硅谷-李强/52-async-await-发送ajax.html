@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sendAjax(url) {
+            return new Promise((resolve, reject) => {
+                const x = new XMLHttpRequest()
+                x.open("GET", url)
+                x.send()
+                x.onreadystatechange = function () {
+                    if (x.readyState === 4) {
+                        if (x.status >= 200 && x.status < 300) {
+                            resolve(x.response)
+                        } else {
+                            reject(x.status)
+                        }
+                    }
+                }
+            })
+        }
+
+        // then 方法测试
+        // let res = sendAjax('https://api.apiopen.top/getJoke')
+        // res.then(value => {
+        //     console.log(value);
+        // }, reason => {
+        //     console.warn(reason);
+        // })
+
+        // async await测试
+        async function main() {
+            let result = await sendAjax('https://api.apiopen.top/getJoke')
+            let whether = await sendAjax('https://town.yiketianqi.com/?appid=&appsecret=&version=day&citycode=398772')
+            // console.log(result);
+            console.log(whether);
+        }
+
+        main()
+
+        // axios 后续使用
+        // 返回结果也是Promise对象
+
+
+    </script>
+</body>
+
+</html>

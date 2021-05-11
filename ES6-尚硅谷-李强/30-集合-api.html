@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // set 新的数据解构
+        let s = new Set()
+        let s_2 = new Set(['a', 'b', 'c'])
+
+        console.log(s, typeof s);
+        console.log(s_2, typeof s);
+
+        console.log(s.size);
+
+        s_2.add('d')
+        s_2.delete('a')
+        console.log(s_2);
+
+        console.log(s_2.has('a'));
+
+        for (const v of s_2) {
+            console.log(v);
+        }
+
+        s_2.clear()
+        console.log(s_2);
+
+
+    </script>
+</body>
+
+</html>

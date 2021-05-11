@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = 123
+        console.log(BigInt(n));
+        // 123n
+
+        // 主要用于大数值运算
+        console.log(Number.MAX_SAFE_INTEGER);
+        console.log(BigInt(Number.MAX_SAFE_INTEGER) + BigInt(10));
+    </script>
+</body>
+
+</html>

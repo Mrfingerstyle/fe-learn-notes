@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function Phone(name, age) {
+        //     this.name = name
+        //     this.age = age
+        // }
+        // // 静态成员
+        // Phone.size = '5.5'
+        // Phone.prototype.call = function () {
+        //     console.log('call function');
+        // }
+
+        class Phone {
+            static size = '5.5'
+            static change() {
+                console.log('change');
+            }
+
+            constructor(brand, price) {
+                this.brand = brand
+                this.price = price
+            }
+
+            call() {
+                console.log('call function');
+            }
+        }
+
+        // let phone = new Phone()
+        // console.log(phone.size);
+        console.log(Phone.size);
+        Phone.change()
+
+    </script>
+</body>
+
+</html>

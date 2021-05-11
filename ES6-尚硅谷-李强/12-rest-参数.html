@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ES5
+        // function date() {
+        //     console.log(arguments);
+        // }
+        // 返回对象
+        // date(1)
+
+        // ES6
+        function date(...args) {
+            console.log(args);
+        }
+        // 返回数组 提高参数处理的灵活程度
+        // rest 参数必须放在最后
+        date('a', 'b')
+    </script>
+</body>
+
+</html>

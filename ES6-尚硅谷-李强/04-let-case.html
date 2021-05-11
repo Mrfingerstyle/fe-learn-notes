@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+
+        .page-header {
+            font-size: 30px;
+            color: grey;
+        }
+
+        .item {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border: 2px solid skyblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="page-header">点击切换颜色</h2>
+        <hr>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <script>
+        let items = document.getElementsByClassName('item')
+        for (let i = 0; i < items.length; i++) {
+            items[i].onclick = function () {
+                this.style.background = "red"
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // await 必须在 async函数中
+        // await右侧的表达式是promise对象
+        // await返回的是promise对象
+        // await的promise失败了 会抛出异常 try-catch处理
+
+        const p = new Promise((resolve, reject) => {
+            // resolve('用户数据')
+            reject('fail')
+        })
+
+        async function main() {
+            try {
+                let res = await p
+                console.log(res);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        main()
+
+    </script>
+</body>
+
+</html>

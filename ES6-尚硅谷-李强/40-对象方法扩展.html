@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 判断两个值是否完全相等
+        console.log(Object.is(10, 10));
+        console.log(Object.is(NaN, NaN));
+        console.log(NaN === NaN);
+
+        // 对象合并
+        const obj_1 = { name: 'll', age: 10 }
+        const obj_2 = { name: 'ly', age: 12 }
+
+        // 参数 模版 覆盖内容
+        console.log(Object.assign(obj_1, obj_2));
+
+        // 设置原型对象
+        const sc = {
+            name: 'll',
+        }
+        const ct = {
+            age: 10
+        }
+
+        Object.setPrototypeOf(sc, ct)
+        console.log(sc);
+
+        // 获取原型对象
+        console.log(Object.getPrototypeOf(sc));
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 特定时机才会执行
+        // 判断是否属于类的实例
+        class Person {
+            static [Symbol.hasInstance](param) {
+                console.log(param);
+                console.log('用来检测类型');
+            }
+        }
+
+        let o = { name: 'll' }
+
+        console.log(o instanceof Person);
+
+        // 控制数组是否可以展开
+        const arr = [1, 2, 3]
+        const arr_2 = [4, 5, 6]
+        console.log(arr.concat(arr_2));
+        arr_2[Symbol.isConcatSpreadable] = false
+        console.log(arr.concat(arr_2));
+    </script>
+</body>
+
+</html>
